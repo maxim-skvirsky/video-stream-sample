@@ -52,7 +52,8 @@ app.get("/video", function(req, res) {
 });
 
 app.get("/vasts", function(req, res) {
-  res.type("application/xml").sendfile("vasts/sample.xml");
+  console.log(req.query);
+  res.type("application/xml").sendFile("vasts/sample.xml");
 });
 
 app.get("/impression-pixel", function(req, res) {
