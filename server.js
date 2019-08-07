@@ -49,6 +49,30 @@ app.get("/video", function(req, res) {
   }
 });
 
+app.get("/vasts", function(req, res) {
+  res.type("application/xml").sendfile("vasts/sample.xml");
+});
+
+app.get("/impression-pixel", function(req, res) {
+  console.log("impression-pixel");
+});
+
+app.get("/start", function(req, res) {
+  console.log("start");
+});
+
+app.get("/complete", function(req, res) {
+  console.log("complete");
+});
+
+app.get("/fullscreen", function(req, res) {
+  console.log("fullscreen");
+});
+
+app.get("/clicked", function(req, res) {
+  console.log("video clicked");
+});
+
 app.listen(process.env.PORT || 8081, function() {
   console.log("Listening on port 8000!");
 });
