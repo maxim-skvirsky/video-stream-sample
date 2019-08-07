@@ -53,7 +53,9 @@ app.get("/video", function(req, res) {
 
 app.get("/vasts", function(req, res) {
   console.log(req.query);
-  res.type("application/xml").sendFile("vasts/sample.xml");
+  res
+    .type("application/xml")
+    .sendFile(path.join(__dirname, "vasts/sample.xml"));
 });
 
 app.get("/impression-pixel", function(req, res) {
