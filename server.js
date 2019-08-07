@@ -2,8 +2,10 @@ const express = require("express");
 const fs = require("fs");
 const path = require("path");
 const app = express();
+const cors = require("cors");
 
 app.use(express.static(path.join(__dirname, "public")));
+app.use(cors());
 
 app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname + "/index.htm"));
