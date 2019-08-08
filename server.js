@@ -10,6 +10,10 @@ const pixel = require("./routes/pixel");
 
 const port = process.env.PORT || 8081;
 
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, "client/build")));
+
+// allow cors calls
 app.use(cors());
 
 app.get("/", function(req, res) {

@@ -30,4 +30,12 @@ router.get("/vast/none", (req, res) => {
   res.type("application/xml").sendFile(root + "/vasts/noads.xml");
 });
 
+router.post("vast/:name", (req, res) => {
+  const name = req.params.name;
+  if (name) {
+  } else {
+    res.status(400).send("No name provided");
+  }
+});
+
 module.exports = router;
