@@ -5,8 +5,9 @@ const app = express();
 const cors = require("cors");
 
 const creatives = require("./routes/api/creatives");
+const vasts = require("./routes/api/vasts");
 
-app.use(express.static(path.join(__dirname, "public")));
+// app.use(express.static(path.join(__dirname, "public")));
 app.use(cors());
 
 app.get("/", function(req, res) {
@@ -14,57 +15,7 @@ app.get("/", function(req, res) {
 });
 
 app.use("/api/creatives", creatives);
-// app.get("/video", function(req, res) {
-//   const filename = req.query.filename;
-//   let path;
-//   if (filename) {
-//     path = "assets/" + filename;
-//   }
-//   try {
-//     const stat = fs.statSync(path);
-//     const fileSize = stat.size;
-//     const range = req.headers.range;
-
-//     if (range) {
-//       const parts = range.replace(/bytes=/, "").split("-");
-//       const start = parseInt(parts[0], 10);
-//       const end = parts[1] ? parseInt(parts[1], 10) : fileSize - 1;
-
-//       const chunksize = end - start + 1;
-//       const file = fs.createReadStream(path, { start, end });
-//       const head = {
-//         "Content-Range": `bytes ${start}-${end}/${fileSize}`,
-//         "Accept-Ranges": "bytes",
-//         "Content-Length": chunksize,
-//         "Content-Type": "video/mp4"
-//       };
-
-//       res.writeHead(206, head);
-//       file.pipe(res);
-//     } else {
-//       const head = {
-//         "Content-Length": fileSize,
-//         "Content-Type": "video/mp4"
-//       };
-//       res.writeHead(200, head);
-//       fs.createReadStream(path).pipe(res);
-//     }
-//   } catch (error) {
-//     return res.status(404).send({ message: "File not found!" });
-//   }
-// });
-
-app.get("/vasts", function(req, res) {
-  // console.log(req.query);
-  // serve by network type (3g, 4g, wifi)
-  // serve by impression
-  //
-  const ip = req.query.ip;
-
-  res
-    .type("application/xml")
-    .sendFile(path.join(__dirname, "vasts/sample.xml"));
-});
+app.use("/api/vasts", vasts);
 
 app.get("/impression-pixel", function(req, res) {
   console.log("impression-pixel");
