@@ -19,7 +19,7 @@
             </VideoClicks>
             <MediaFiles>
               <MediaFile type="video/mp4" bitrate="300" width="1080" height="1920">
-                https://thawing-gorge-90101.herokuapp.com/creatives/video/cal10.mp4
+                https://thawing-gorge-90101.herokuapp.com/api/creatives/video/cal10.mp4
               </MediaFile>
             </MediaFiles>
            </Linear>
