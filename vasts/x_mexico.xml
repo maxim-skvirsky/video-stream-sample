@@ -1,0 +1,30 @@
+<VAST version="2.0">
+  <Ad id="static">
+    <InLine>
+      <AdSystem>Static VAST Template</AdSystem>
+      <AdTitle>Static VAST Tag</AdTitle>
+      <Impression>https://thawing-gorge-90101.herokuapp.com/impression-pixel</Impression>
+      <Creatives>
+        <Creative>
+          <Linear>
+            <Duration>00:00:10</Duration>
+            <TrackingEvents>
+              <Tracking event="start">https://thawing-gorge-90101.herokuapp.com/start</Tracking>
+              <Tracking event="complete">https://thawing-gorge-90101.herokuapp.com/complete</Tracking>
+              <Tracking event="fullscreen">https://thawing-gorge-90101.herokuapp.com/fullscreen</Tracking>
+            </TrackingEvents>
+            <VideoClicks>
+              <ClickThrough>https://apps.apple.com/mx/app/caliente-deportes/id950876153</ClickThrough>
+              <ClickTracking>https://thawing-gorge-90101.herokuapp.com/clicked</ClickTracking>
+            </VideoClicks>
+            <MediaFiles>
+              <MediaFile type="video/mp4" bitrate="300" width="1080" height="1920">
+                https://thawing-gorge-90101.herokuapp.com/video?filename=cal10.mp4
+              </MediaFile>
+            </MediaFiles>
+           </Linear>
+        </Creative>
+      </Creatives>
+    </InLine>
+  </Ad>
+</VAST>
