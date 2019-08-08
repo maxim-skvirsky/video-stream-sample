@@ -5,6 +5,9 @@ const router = express.Router();
 
 const root = path.dirname(require.main.filename);
 
+// @route   GET api/vasts/:name
+// @desc    return a vast xml by its name
+// @access  Public
 router.get("/vast/:name", (req, res) => {
   const name = req.params.name;
   let path;
