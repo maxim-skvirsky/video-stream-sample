@@ -24,6 +24,10 @@ app.use("/api/creatives", creatives);
 app.use("/api/vasts", vasts);
 app.use("/pixel", pixel);
 
+app.get("*", (req, res) => {
+  res.sendfile(path.join(__dirname + "/client/build/index.html"));
+});
+
 app.listen(port, function() {
   console.log("Listening on port " + port);
 });
