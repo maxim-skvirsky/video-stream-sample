@@ -26,4 +26,8 @@ router.get("/vast/:name", (req, res) => {
   }
 });
 
+router.get("/vast/none", (req, res) => {
+  res.type("application/xml").sendFile(root + "/vasts/noads.xml");
+});
+
 module.exports = router;
