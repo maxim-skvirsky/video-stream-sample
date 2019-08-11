@@ -25,7 +25,7 @@ router.get("/vast/auto", (req, res) => {
     app_name,
     lat_string,
     device,
-    netowkr,
+    network,
     ifa,
     geodata
   });
