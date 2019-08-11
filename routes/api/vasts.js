@@ -2,6 +2,7 @@ const express = require("express");
 const fs = require("fs");
 const path = require("path");
 const geoip = require("geo-from-ip");
+const ip_validator = require("../../utils/ip_validator");
 const router = express.Router();
 
 const root = path.dirname(require.main.filename);
@@ -10,7 +11,8 @@ router.get("/vast/auto", (req, res) => {
   let ip, os, os_version, app_name, lat_string, device, network, ifa, geodata;
   if (req.query) {
     ip = req.query.ip;
-    geodata = ip ? geoip.allData(req.query.ip) : null;
+    geodata =
+      ip && ip_validator.validate(ip) ? geoip.allData(req.query.ip) : null;
     os = req.query.os || null;
     os_version = req.query.os_version || null;
     app_name = req.query.app_name || null;
