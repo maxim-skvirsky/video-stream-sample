@@ -37,6 +37,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>Upload vasts</h1>
         <input type="file" name="" id="" onChange={this.handleselectedFile} />
         <button onClick={this.handleUpload}>Upload</button>
         <div> {Math.round(this.state.loaded, 2)} %</div>
