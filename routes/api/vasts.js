@@ -9,6 +9,7 @@ const root = path.dirname(require.main.filename);
 router.get("/vast/auto", (req, res) => {
   let ip, os, os_version, app_name, lat_string, device, network, ifa, geodata;
   if (req.query) {
+    ip = req.query.ip;
     geodata = ip ? geoip.allData(req.query.ip) : null;
     os = req.query.os || null;
     os_version = req.query.os_version || null;
@@ -29,6 +30,7 @@ router.get("/vast/auto", (req, res) => {
     ifa,
     geodata
   });
+  res.json(req.query);
 });
 
 // @route   GET api/vasts/:name
