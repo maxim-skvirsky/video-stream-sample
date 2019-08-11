@@ -1,11 +1,36 @@
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
+const geoip = require("geo-from-ip");
 const router = express.Router();
 
 const root = path.dirname(require.main.filename);
 
-const is_exists = filename => {};
+router.get("/vast/auto", (req, res) => {
+  let ip, os, os_version, app_name, lat_string, device, network, ifa, geodata;
+  if (req.query) {
+    geodata = ip ? geoip.allData(req.query.ip) : null;
+    os = req.query.os || null;
+    os_version = req.query.os_version || null;
+    app_name = req.query.app_name || null;
+    lat_string = req.query.lat_string === "true";
+    device = req.query.device || null;
+    ifa = req.query.ifa || null;
+    network = req.query.network || null;
+  }
+  console.log({
+    ip,
+    os,
+    os_version,
+    app_name,
+    lat_string,
+    device,
+    netowkr,
+    ifa,
+    geodata
+  });
+});
+
 // @route   GET api/vasts/:name
 // @desc    return a vast xml by its name
 // @access  Public
