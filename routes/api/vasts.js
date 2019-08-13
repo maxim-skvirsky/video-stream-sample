@@ -18,7 +18,6 @@ router.get("/vast/auto", (req, res) => {
 router.get("/vast/:name", (req, res) => {
   const name = req.params.name;
   let path;
-  //   const ip = req.query.ip;
   if (name) {
     path = root + "/vasts/" + name;
     fs.access(path, fs.F_OK, err => {
