@@ -2,35 +2,13 @@ const express = require("express");
 const fs = require("fs");
 const path = require("path");
 const geoip = require("geo-from-ip");
-const validate_ip = require("../../utils/ip_validator");
+const reqParser = require("../../utils/requestDataExtract");
 const router = express.Router();
 
 const root = path.dirname(require.main.filename);
 
 router.get("/vast/auto", (req, res) => {
-  let ip, os, os_version, app_name, lat_string, device, network, ifa, geodata;
-  if (req.query) {
-    ip = req.query.ip;
-    geodata = ip && validate_ip(ip) ? geoip.allData(req.query.ip) : null;
-    os = req.query.os || null;
-    os_version = req.query.os_version || null;
-    app_name = req.query.app_name || null;
-    lat_string = req.query.lat_string === "true";
-    device = req.query.device || null;
-    ifa = req.query.ifa || null;
-    network = req.query.network || null;
-  }
-  console.log({
-    ip,
-    os,
-    os_version,
-    app_name,
-    lat_string,
-    device,
-    network,
-    ifa,
-    geodata
-  });
+  const query = reqParser(req.query);
   res.json(req.query);
 });
 
