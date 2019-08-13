@@ -16,6 +16,7 @@
     "cors": "^2.8.5",
     "express": "^4.15.3",
     "express-fileupload": "^1.1.5",
-    "geo-from-ip": "^1.2.1"
+    "geo-from-ip": "^1.2.1",
+    "mongoose": "^5.6.9"
   }
 }

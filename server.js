@@ -1,14 +1,20 @@
 const express = require("express");
-const fs = require("fs");
 const path = require("path");
 const app = express();
 const cors = require("cors");
+const mongoose = require("mongoose");
+const db = require("./config/keys").mongoURI;
 
 const creatives = require("./routes/api/creatives");
 const vasts = require("./routes/api/vasts");
 const pixel = require("./routes/pixel");
 
 const port = process.env.PORT || 8081;
+
+mongoose
+  .connect(db)
+  .then(() => console.log("Mongo Db Connected"))
+  .catch(err => console.log("Mongo connection error : " + err));
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, "client/build")));
