@@ -3,6 +3,7 @@
     <InLine>
       <AdSystem>Static VAST Template</AdSystem>
       <AdTitle>Static VAST Tag</AdTitle>
+      <!-- <Impression>https://thawing-gorge-90101.herokuapp.com/pixel/impression-pixel</Impression> -->
       <Creatives>
         <Creative>
           <Linear>
@@ -17,19 +18,11 @@
               <!-- <ClickTracking>https://thawing-gorge-90101.herokuapp.com/pixel/clicked</ClickTracking> -->
             </VideoClicks>
             <MediaFiles>
-              <MediaFile type="video/mp4" bitrate="300" width="1080" height="1920" delivery="streaming">
+              <MediaFile type="video/mp4" bitrate="300" width="1080" height="1920">
                 https://thawing-gorge-90101.herokuapp.com/api/creatives/video/cal10.mp4
               </MediaFile>
             </MediaFiles>
            </Linear>
-           <CompanionAds>
-              <Companion width="768" height="1024">
-                <StaticResource creativeType="image/gif">
-                   https://thawing-gorge-90101.herokuapp.com/api/creatives/image/large.gif
-                </StaticResource>
-              <CompanionClickThrough>https://nerve.eshkol.io/go?uid=5d4c15c434356</CompanionClickThrough> 
-              </Companion>
-          </CompanionAds>
         </Creative>
       </Creatives>
     </InLine>
