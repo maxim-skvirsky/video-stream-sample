@@ -3,8 +3,8 @@ const path = require("path");
 const app = express();
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
-const db = require("./config/keys").mongoURI;
+// const mongoose = require("mongoose");
+// const db = require("./config/keys").mongoURI;
 
 const creatives = require("./routes/api/creatives");
 const vasts = require("./routes/api/vasts");
@@ -16,10 +16,11 @@ const port = process.env.PORT || 8081;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-mongoose
-  .connect(db)
-  .then(() => console.log("Mongo Db Connected"))
-  .catch(err => console.log("Mongo connection error : " + err));
+// mongoose
+//   .connect(db)
+//   .then(() => console.log("Mongo Db Connected"))
+//   .catch(err => console.log("Mongo connection error : " + err));
+// const cache = require("./utils/cache");
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, "client/build")));

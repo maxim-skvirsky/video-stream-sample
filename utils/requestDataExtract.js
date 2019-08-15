@@ -1,17 +1,18 @@
 const validate_ip = require("./ip_validator");
+const geoip = require("geo-from-ip");
 
-module.exports = function parseRequest(request) {
+module.exports = function parseRequest(query) {
   let ip, os, os_version, app_name, lat, device, network, ifa, geodata;
-  if (request.query) {
-    ip = request.query.ip;
-    geodata = ip && validate_ip(ip) ? geoip.allData(request.query.ip) : null;
-    os = request.query.os || null;
-    os_version = request.query.os_version || null;
-    app_name = request.query.app_name || null;
-    lat = request.query.lat_string === "true";
-    device = request.query.device || null;
-    ifa = request.query.ifa || null;
-    network = request.query.network || null;
+  if (query) {
+    ip = query.ip;
+    geodata = ip && validate_ip(ip) ? geoip.allData(query.ip) : null;
+    os = query.os || null;
+    os_version = query.os_version || null;
+    app_name = query.app_name || null;
+    lat = query.lat_string === "true";
+    device = query.device || null;
+    ifa = query.ifa || null;
+    network = query.network || null;
   }
   console.log({
     ip,

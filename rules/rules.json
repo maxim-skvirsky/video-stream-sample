@@ -1,0 +1,34 @@
+{
+  "similaraudiences": [
+    {
+      "id": 0,
+      "geo_include": ["mexico"],
+      "geo_exclude": [],
+      "appname": "similaraudiences",
+      "ad": "mexico"
+    },
+    {
+      "id": 1,
+      "geo_include": [],
+      "geo_exclude": ["mexico"],
+      "appname": "similaraudiences",
+      "ad": "x_mexico"
+    },
+    {
+      "appname": "similaraudiences",
+      "geo_include": "a",
+      "geo_exclude": "ab",
+      "ad": "mexico",
+      "id": 1565860039357
+    }
+  ],
+  "otherapp": [
+    {
+      "id": 2,
+      "geo_include": [],
+      "geo_exclude": [],
+      "appname": "otherapp",
+      "ad": "none"
+    }
+  ]
+}
