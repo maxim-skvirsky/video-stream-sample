@@ -50,6 +50,20 @@ router.get("/video/:videofilename", (req, res) => {
   }
 });
 
+// @route   GET api/video/:videfilename
+// @desc    stream a video by the video filename
+// @access  Public
+router.get("/image/:imagename", (req, res) => {
+  const filename = req.params.imagename;
+  let file_path;
+  if (filename) {
+    file_path = root + "/assets/images/" + filename;
+    res.sendFile(file_path);
+  } else {
+    return res.status(404).send({ message: "File not found!" });
+  }
+});
+
 // @route   GET api/creatives/test
 // @desc    check if the api root is working properly
 // @access  Public

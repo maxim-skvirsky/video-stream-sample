@@ -1,7 +1,6 @@
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
-const geoip = require("geo-from-ip");
 const reqParser = require("../../utils/requestDataExtract");
 const router = express.Router();
 
