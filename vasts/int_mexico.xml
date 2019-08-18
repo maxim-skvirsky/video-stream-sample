@@ -11,7 +11,7 @@
 			<Creatives>
 				<Creative AdID="1">
 					<Linear>
-						<Duration>00:00:01</Duration>
+						<Duration>00:00:05</Duration>
 						<TrackingEvents>
 							<Tracking event="creativeView">https://thawing-gorge-90101.herokuapp.com/api/pixel/creativeView</Tracking>
 							<Tracking event="start">
