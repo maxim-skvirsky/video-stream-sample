@@ -24,7 +24,7 @@
 						</TrackingEvents>
 						<VideoClicks>
 							<ClickThrough>
-							  <![CDATA[https://nerve.eshkol.io/go?uid=5d4c15c434356]]>
+							  <![CDATA[https://google.com]]>
 							</ClickThrough>
 							<ClickTracking>https://thawing-gorge-90101.herokuapp.com/api/pixel/click</ClickTracking>
 						</VideoClicks>
