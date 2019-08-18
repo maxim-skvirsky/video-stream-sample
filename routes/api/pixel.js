@@ -56,15 +56,15 @@ router.post("/clicked", function(req, res) {
   console.log("video clicked post " + req.query);
 });
 
-router.get("/createView", function(req, res) {
-  console.log("video createView get " + req.query);
+router.get("/creativeView", function(req, res) {
+  console.log("video creativeView get " + req.query);
   console.log(req.query);
 
   res.status(200).send();
 });
 
-router.post("/createView", function(req, res) {
-  console.log("video createView post " + req.query);
+router.post("/creativeView", function(req, res) {
+  console.log("video creativeView post " + req.query);
 });
 
 module.exports = router;
