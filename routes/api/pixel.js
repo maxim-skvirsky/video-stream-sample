@@ -3,6 +3,8 @@ const router = express.Router();
 
 router.get("/impression-pixel", function(req, res) {
   console.log("impression-pixel get " + req);
+  console.log({ req });
+
   res.status(200).send();
 });
 
@@ -12,6 +14,8 @@ router.post("/impression-pixel", function(req, res) {
 
 router.get("/start", function(req, res) {
   console.log("start get " + req);
+  console.log({ req });
+
   res.status(200).send();
 });
 
@@ -21,6 +25,8 @@ router.post("/start", function(req, res) {
 
 router.get("/complete", function(req, res) {
   console.log("complete get " + req);
+  console.log({ req });
+
   res.status(200).send();
 });
 
@@ -30,6 +36,8 @@ router.get("/complete", function(req, res) {
 
 router.get("/fullscreen", function(req, res) {
   console.log("fullscreen get " + req);
+  console.log({ req });
+
   res.status(200).send();
 });
 
@@ -39,6 +47,8 @@ router.post("/fullscreen", function(req, res) {
 
 router.get("/clicked", function(req, res) {
   console.log("video clicked get " + req);
+  console.log({ req });
+
   res.status(200).send();
 });
 
@@ -48,6 +58,8 @@ router.post("/clicked", function(req, res) {
 
 router.get("/createView", function(req, res) {
   console.log("video createView get " + req);
+  console.log({ req });
+
   res.status(200).send();
 });
 
