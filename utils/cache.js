@@ -2,13 +2,21 @@ const fs = require("fs");
 const path = __dirname + "/../rules/rules.json";
 
 function Cache() {
-  this.cache = JSON.parse(fs.readFileSync(path));
-  if (!this.cache) {
-    console.error("could not load rules from file!");
-  } else {
-    console.log("Loaded rules from persistance");
-  }
+  this.cache = {};
+  init(this);
+  // this.cache = JSON.parse(fs.readFileSync(path));
+  // if (!this.cache) {
+  //   console.error("could not load rules from file!");
+  // } else {
+  //   console.log("Loaded rules from persistance");
+  // }
 }
+
+Cache.prototype.reloadRules = function() {
+  console.log("Reloading rules");
+  this.cache = {};
+  init(this);
+};
 
 Cache.prototype.get = function(property) {
   console.log(this.cache);
@@ -80,6 +88,15 @@ const persist = function(data) {
       console.log("Persisted rules successfully");
     }
   });
+};
+
+const init = function(that) {
+  that.cache = JSON.parse(fs.readFileSync(path));
+  if (!that.cache) {
+    console.error("could not load rules from file!");
+  } else {
+    console.log("Loaded rules from persistance");
+  }
 };
 
 module.exports = new Cache();
