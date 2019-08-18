@@ -6,15 +6,12 @@ const router = express.Router();
 
 const cache = require("../../utils/cache");
 
-// const mongoose = require("mongoose");
-// const Rule = require("../../models/Rule");
-
 const root = path.dirname(require.main.filename);
 
-const serveXMLByName = function(name, res) {
+const serveXMLByName = function(name, adtype, res) {
   let path;
   if (name) {
-    path = root + "/vasts/" + name;
+    path = root + "/vasts/" + adtype + "_" + name;
     fs.access(path, fs.F_OK, err => {
       if (err) {
         res.status(404).send("File not found!");
@@ -27,29 +24,47 @@ const serveXMLByName = function(name, res) {
   }
 };
 
-// @route   GET api/vasts/auto
+const filterRules = function(appRules) {
+  appRules
+    .filter(rule => {
+      if (rule.geo_include.indexOf(query.geodata.country) > -1) {
+        return rule;
+      }
+    })
+    .filter(rule => {
+      if (rule.geo_exclude.indexOf(query.geodata.country) === -1) {
+        return rule;
+      }
+    });
+  return appRules;
+};
+
+// @route   GET api/vasts/RewardedVideoAuto
 // @desc    return a vast xml according to the set rules. If no matching rule found - retuns empty vast xml
 // @access  Public
-router.get("/auto", (req, res) => {
+router.get("/RewardedVideoAuto", (req, res) => {
   const query = reqParser(req.query);
   let appRules = [];
   let adToServe = "none.xml";
   if (query.app_name) {
-    appRules = cache.getByAppName(query.app_name);
-    appRules
-      .filter(rule => {
-        if (rule.geo_include.indexOf(query.geodata.country) > -1) {
-          return rule;
-        }
-      })
-      .filter(rule => {
-        if (rule.geo_exclude.indexOf(query.geodata.country) === -1) {
-          return rule;
-        }
-      });
+    appRules = filterRules(cache.getByAppName(query.app_name));
   }
   adToServe = appRules.length > 0 ? appRules[0].ad + ".xml" : adToServe;
-  serveXMLByName(adToServe, res);
+  serveXMLByName(adToServe, "rv", res);
+});
+
+// @route   GET api/vasts/InterstitialAuto
+// @desc    return a vast xml according to the set rules. If no matching rule found - retuns empty vast xml
+// @access  Public
+router.get("/InterstitialAuto", (req, res) => {
+  const query = reqParser(req.query);
+  let appRules = [];
+  let adToServe = "none.xml";
+  if (query.app_name) {
+    appRules = filterRules(cache.getByAppName(query.app_name));
+  }
+  adToServe = appRules.length > 0 ? appRules[0].ad + ".xml" : adToServe;
+  serveXMLByName(adToServe, "int", res);
 });
 
 // @route   GET api/vasts/:name

@@ -9,6 +9,8 @@ const root = path.dirname(require.main.filename);
 // @desc    stream a video by the video filename
 // @access  Public
 router.get("/video/:videofilename", (req, res) => {
+  console.log("video request : " + req);
+
   const filename = req.params.videofilename;
   let file_path;
   if (filename) {
@@ -54,6 +56,8 @@ router.get("/video/:videofilename", (req, res) => {
 // @desc    stream a video by the video filename
 // @access  Public
 router.get("/image/:imagename", (req, res) => {
+  console.log("image request : " + req);
+
   const filename = req.params.imagename;
   let file_path;
   if (filename) {
