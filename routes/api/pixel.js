@@ -46,4 +46,13 @@ router.post("/clicked", function(req, res) {
   console.log("video clicked post");
 });
 
+router.get("/createView", function(req, res) {
+  console.log("video createView get");
+  res.status(200).send();
+});
+
+router.post("/createView", function(req, res) {
+  console.log("video createView post");
+});
+
 module.exports = router;
