@@ -24,7 +24,7 @@ const serveXMLByName = function(name, adtype, res) {
   }
 };
 
-const filterRules = function(appRules) {
+const filterRules = function(appRules, query) {
   appRules
     .filter(rule => {
       if (rule.geo_include.indexOf(query.geodata.country) > -1) {
@@ -47,7 +47,7 @@ router.get("/RewardedVideoAuto", (req, res) => {
   let appRules = [];
   let adToServe = "none.xml";
   if (query.app_name) {
-    appRules = filterRules(cache.getByAppName(query.app_name));
+    appRules = filterRules(cache.getByAppName(query.app_name), query);
   }
   adToServe = appRules.length > 0 ? appRules[0].ad + ".xml" : adToServe;
   serveXMLByName(adToServe, "rv", res);
@@ -61,7 +61,7 @@ router.get("/InterstitialAuto", (req, res) => {
   let appRules = [];
   let adToServe = "none.xml";
   if (query.app_name) {
-    appRules = filterRules(cache.getByAppName(query.app_name));
+    appRules = filterRules(cache.getByAppName(query.app_name), query);
   }
   adToServe = appRules.length > 0 ? appRules[0].ad + ".xml" : adToServe;
   serveXMLByName(adToServe, "int", res);
