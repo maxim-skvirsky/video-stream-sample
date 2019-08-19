@@ -33,7 +33,7 @@
 						</VideoClicks>
 						<MediaFiles>
 							<MediaFile type="video/mp4" bitrate="300" width="1080" height="1920" delivery="streaming" scalable="true" maintainAspectRatio="true">
-							  <![CDATA[https://thawing-gorge-90101.herokuapp.com/api/creatives/video/cal10.mp4]]>
+							  <![CDATA[https://storage.googleapis.com/crazyball_adserver/videos/Caliente/CalienteChivasSiemprePuesta10sec.mp4]]>
 							</MediaFile>
 						</MediaFiles>
 
@@ -42,7 +42,7 @@
 				<Creative AdID="2">
 					<CompanionAds>
 						<Companion width="320" height="480">
-							<StaticResource creativeType="image/gif">https://thawing-gorge-90101.herokuapp.com/api/creatives/image/small.gif</StaticResource>
+							<StaticResource creativeType="image/gif">https://storage.googleapis.com/crazyball_adserver/images/Caliente/Aquisition_Soccer-400-FREE_320x480.gif</StaticResource>
 							<CompanionClickThrough>https://nerve.eshkol.io/go?uid=5d4c15c434356</CompanionClickThrough>
 						</Companion>
 					</CompanionAds>
