@@ -8,10 +8,11 @@ const cache = require("../../utils/cache");
 
 const root = path.dirname(require.main.filename);
 
-const serveXMLByName = function(name, adtype, res) {
+const serveXMLByName = function(name, res, adtype) {
   let path;
+  adtype = adtype ? "_" + adtype : "";
   if (name) {
-    path = root + "/vasts/" + adtype + "_" + name;
+    path = root + "/vasts/" + adtype + name + ".xml";
     fs.access(path, fs.F_OK, err => {
       if (err) {
         res.status(404).send("File not found!");
@@ -50,7 +51,7 @@ router.get("/RewardedVideoAuto", (req, res) => {
     appRules = filterRules(cache.getByAppName(query.app_name), query);
   }
   adToServe = appRules.length > 0 ? appRules[0].ad + ".xml" : adToServe;
-  serveXMLByName(adToServe, "rv", res);
+  serveXMLByName(adToServe, res, "rv");
 });
 
 // @route   GET api/vasts/InterstitialAuto
@@ -64,7 +65,15 @@ router.get("/InterstitialAuto", (req, res) => {
     appRules = filterRules(cache.getByAppName(query.app_name), query);
   }
   adToServe = appRules.length > 0 ? appRules[0].ad + ".xml" : adToServe;
-  serveXMLByName(adToServe, "int", res);
+  serveXMLByName(adToServe, res, "int");
+});
+
+// @route   GET api/vasts/test
+// @desc    return a test vast xml
+// @access  Public
+router.get("/vast/test", (req, res) => {
+  const name = "test";
+  serveXMLByName(name, res);
 });
 
 // @route   GET api/vasts/:name
