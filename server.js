@@ -36,6 +36,15 @@ app.use("/api/creatives", creatives);
 app.use("/api/vasts", vasts);
 app.use("/api/pixel", pixel);
 app.use("/api/rules", rules);
+app.use("/api/unity/test", (req, res) => {
+  res.json({
+    title: "Play our other games!",
+    creative: "https://picsum.photos/id/217/200/200",
+    creativelink:
+      "https://play.google.com/store/apps/details?id=com.AppReal.ShootingBalls3D&hl=en",
+    footer: "Shooting Balls 3D"
+  });
+});
 
 app.get("*", (req, res) => {
   res.sendfile(path.join(__dirname + "/client/build/index.html"));
