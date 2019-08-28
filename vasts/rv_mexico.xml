@@ -12,7 +12,7 @@
             <Creatives>
                 <Creative AdID="1">
                     <Linear>
-                        <Duration>00:00:10</Duration>
+                        <Duration>00:00:00</Duration>
                         <TrackingEvents>
                             <Tracking event="start">
                                 <![CDATA[https://cd.socalmedialtd.com/api/pixel/start?ip=80.246.139.167&os=android&os_version=9&app_name=similaraudiences&lat=false&device=null&network=3g&ifa=e4a3699f-744a-4fd6-bd00-391bcdb562fa&$contry=Israel&creative=CalienteChivasSiemprePuesta10sec.mp4&adTitle=CalienteInterstitialAd1&campaign=caliente]]>
