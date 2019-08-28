@@ -12,7 +12,7 @@
             <Creatives>
                 <Creative AdID="1">
                     <Linear>
-                        <Duration>00:00:00</Duration>
+                        <Duration>00:00:10</Duration>
                         <TrackingEvents>
                             <Tracking event="start">
                                 <![CDATA[https://cd.socalmedialtd.com/api/pixel/start?ip=80.246.139.167&os=android&os_version=9&app_name=similaraudiences&lat=false&device=null&network=3g&ifa=e4a3699f-744a-4fd6-bd00-391bcdb562fa&$contry=Israel&creative=CalienteChivasSiemprePuesta10sec.mp4&adTitle=CalienteInterstitialAd1&campaign=caliente]]>
@@ -45,30 +45,18 @@
                         </MediaFiles>
                     </Linear>
                 </Creative>
-                <Creative AdID="2">
+                <!-- <Creative AdID="2">
                     <CompanionAds>
                         <Companion width="320" height="480">
-						<Creatives>
-						<Creative>
-						<MediaFiles>
-                            <MediaFile type="video/mp4" bitrate="300" width="1080" height="1920" delivery="streaming" scalable="true" maintainAspectRatio="true">
-                                <![CDATA[https://storage.googleapis.com/crazyball_adserver/videos/Caliente/LiveCasino_18Dic_Full.mp4]]>
-                            </MediaFile>
-                        </MediaFiles>
-						</Creative>
-						<Creative>
-						<!-- <StaticResource creativeType="image/gif">
+                            <StaticResource creativeType="image/gif">
                                 <![CDATA[https://storage.googleapis.com/crazyball_adserver/images/Caliente/Aquisition_Soccer-400-FREE_320x480.gif]]>
-                            </StaticResource> -->
+                            </StaticResource>
                             <!-- <CompanionClickThrough>
                                 <![CDATA[https://nerve.eshkol.io/go?uid=5d5d531b30080&area=similaraudiences&click_id=e4a3699f-744a-4fd6-bd00-391bcdb562fa&creative_id=Aquisition_Soccer-400-FREE_320x480.gif&sub_area=1]]>
                             </CompanionClickThrough> -->
-						</Creative>
-						</Creatives>
-                            
                         </Companion>
                     </CompanionAds>
-                </Creative>
+                </Creative> -->
             </Creatives>
         </InLine>
     </Ad>
