@@ -57,9 +57,9 @@
                         </MediaFiles>
 						</Creative>
 						<Creative>
-						<StaticResource creativeType="image/gif">
+						<!-- <StaticResource creativeType="image/gif">
                                 <![CDATA[https://storage.googleapis.com/crazyball_adserver/images/Caliente/Aquisition_Soccer-400-FREE_320x480.gif]]>
-                            </StaticResource>
+                            </StaticResource> -->
                             <!-- <CompanionClickThrough>
                                 <![CDATA[https://nerve.eshkol.io/go?uid=5d5d531b30080&area=similaraudiences&click_id=e4a3699f-744a-4fd6-bd00-391bcdb562fa&creative_id=Aquisition_Soccer-400-FREE_320x480.gif&sub_area=1]]>
                             </CompanionClickThrough> -->
