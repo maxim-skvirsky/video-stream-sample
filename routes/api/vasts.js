@@ -72,7 +72,7 @@ router.get("/InterstitialAuto", (req, res) => {
 // @access  Public
 router.get("/vast/:name", (req, res) => {
   const name = req.params.name;
-  serveXMLByName(name, res);
+  serveXMLByName(name, "rv", res);
 });
 
 // @route   GET api/vasts/vast/none

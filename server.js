@@ -46,9 +46,9 @@ app.use("/api/unity/test", (req, res) => {
   });
 });
 
-app.get("*", (req, res) => {
-  res.sendfile(path.join(__dirname + "/client/build/index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendfile(path.join(__dirname + "/client/build/index.html"));
+// });
 
 app.listen(port, function() {
   console.log("Listening on port " + port);
