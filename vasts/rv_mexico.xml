@@ -1,52 +1,63 @@
-<VAST version="2.0">	
-	<Ad id="601364">
-	  <InLine>
-	    <AdSystem>Eshkol Adserver</AdSystem>
-	    <AdTitle>CalienteTest</AdTitle>
-	    <Error>https://thawing-gorge-90101.herokuapp.com/api/pixel/error</Error>
-
-	    <Impression>
-	      <![CDATA[https://thawing-gorge-90101.herokuapp.com/api/pixel/impression-pixel]]>
-	    </Impression>
-			<Creatives>
-				<Creative AdID="1">
-					<Linear>
-						<Duration>00:00:10</Duration>
-						<TrackingEvents>
-							<Tracking event="creativeView">https://thawing-gorge-90101.herokuapp.com/api/pixel/creativeView</Tracking>
-
-							<Tracking event="start">
-							  <![CDATA[https://thawing-gorge-90101.herokuapp.com/api/pixel/start]]>
-							</Tracking>
-							<Tracking event="midpoint">https://thawing-gorge-90101.herokuapp.com/api/pixel/midpoint</Tracking>
-							<Tracking event="firstQuartile">https://thawing-gorge-90101.herokuapp.com/api/pixel/firstQuartile</Tracking>
-							<Tracking event="thirdQuartile">https://thawing-gorge-90101.herokuapp.com/api/pixel/thirdQuartile</Tracking>
-							<Tracking event="complete">https://thawing-gorge-90101.herokuapp.com/api/pixel/complete</Tracking>
-						</TrackingEvents>
-
-						<VideoClicks>
-							<ClickThrough>
-							  <![CDATA[https://nerve.eshkol.io/go?uid=5d4c15c434356]]>
-							</ClickThrough>
-							<ClickTracking>https://thawing-gorge-90101.herokuapp.com/api/pixel/click</ClickTracking>
-						</VideoClicks>
-						<MediaFiles>
-							<MediaFile type="video/mp4" bitrate="300" width="1080" height="1920" delivery="streaming" scalable="true" maintainAspectRatio="true">
-							  <![CDATA[https://storage.googleapis.com/crazyball_adserver/videos/Caliente/CalienteChivasSiemprePuesta10sec.mp4]]>
-							</MediaFile>
-						</MediaFiles>
-
-					</Linear>
-				</Creative>
-				<!-- <Creative AdID="2">
-					<CompanionAds>
-						<Companion width="320" height="480">
-							<StaticResource creativeType="image/gif">https://storage.googleapis.com/crazyball_adserver/images/Caliente/Aquisition_Soccer-400-FREE_320x480.gif</StaticResource>
-							<CompanionClickThrough>https://nerve.eshkol.io/go?uid=5d4c15c434356</CompanionClickThrough>
-						</Companion>
-					</CompanionAds>
-				</Creative> -->
-			</Creatives>
-	  </InLine>
-	</Ad>
+<VAST version="2.0">
+    <Ad id="1">
+        <InLine>
+            <AdSystem>CrazyBallADServer</AdSystem>
+            <AdTitle>CalienteInterstitialAd1</AdTitle>
+            <Error>
+                <![CDATA[https://cd.socalmedialtd.com/api/pixel/error?ip=80.246.139.167&os=android&os_version=9&app_name=similaraudiences&lat=false&device=null&network=3g&ifa=e4a3699f-744a-4fd6-bd00-391bcdb562fa&$contry=Israel&creative=CalienteChivasSiemprePuesta10sec.mp4&adTitle=CalienteInterstitialAd1&campaign=caliente]]>
+            </Error>
+            <Impression>
+                <![CDATA[https://cd.socalmedialtd.com/api/pixel/adimpression?ip=80.246.139.167&os=android&os_version=9&app_name=similaraudiences&lat=false&device=null&network=3g&ifa=e4a3699f-744a-4fd6-bd00-391bcdb562fa&$contry=Israel&creative=CalienteChivasSiemprePuesta10sec.mp4&adTitle=CalienteInterstitialAd1&campaign=caliente]]>
+            </Impression>
+            <Creatives>
+                <Creative AdID="1">
+                    <Linear>
+                        <Duration>00:00:10</Duration>
+                        <TrackingEvents>
+                            <Tracking event="start">
+                                <![CDATA[https://cd.socalmedialtd.com/api/pixel/start?ip=80.246.139.167&os=android&os_version=9&app_name=similaraudiences&lat=false&device=null&network=3g&ifa=e4a3699f-744a-4fd6-bd00-391bcdb562fa&$contry=Israel&creative=CalienteChivasSiemprePuesta10sec.mp4&adTitle=CalienteInterstitialAd1&campaign=caliente]]>
+                            </Tracking>
+                            <Tracking event="midpoint">
+                                <![CDATA[https://cd.socalmedialtd.com/api/pixel/midpoint?ip=80.246.139.167&os=android&os_version=9&app_name=similaraudiences&lat=false&device=null&network=3g&ifa=e4a3699f-744a-4fd6-bd00-391bcdb562fa&$contry=Israel&creative=CalienteChivasSiemprePuesta10sec.mp4&adTitle=CalienteInterstitialAd1&campaign=caliente]]>
+                            </Tracking>
+                            <Tracking event="firstQuartile">
+                                <![CDATA[https://cd.socalmedialtd.com/api/pixel/firstQuartile?ip=80.246.139.167&os=android&os_version=9&app_name=similaraudiences&lat=false&device=null&network=3g&ifa=e4a3699f-744a-4fd6-bd00-391bcdb562fa&$contry=Israel&creative=CalienteChivasSiemprePuesta10sec.mp4&adTitle=CalienteInterstitialAd1&campaign=caliente]]>
+                            </Tracking>
+                            <Tracking event="thirdQuartile">
+                                <![CDATA[https://cd.socalmedialtd.com/api/pixel/thirdQuartile?ip=80.246.139.167&os=android&os_version=9&app_name=similaraudiences&lat=false&device=null&network=3g&ifa=e4a3699f-744a-4fd6-bd00-391bcdb562fa&$contry=Israel&creative=CalienteChivasSiemprePuesta10sec.mp4&adTitle=CalienteInterstitialAd1&campaign=caliente]]>
+                            </Tracking>
+                            <Tracking event="complete">
+                                <![CDATA[https://cd.socalmedialtd.com/api/pixel/complete?ip=80.246.139.167&os=android&os_version=9&app_name=similaraudiences&lat=false&device=null&network=3g&ifa=e4a3699f-744a-4fd6-bd00-391bcdb562fa&$contry=Israel&creative=CalienteChivasSiemprePuesta10sec.mp4&adTitle=CalienteInterstitialAd1&campaign=caliente]]>
+                            </Tracking>
+                        </TrackingEvents>
+                        <VideoClicks>
+                            <ClickThrough id="1">
+                                <![CDATA[https://nerve.eshkol.io/go?uid=5d5d531b30080&area=similaraudiences&click_id=e4a3699f-744a-4fd6-bd00-391bcdb562fa&creative_id=CalienteChivasSiemprePuesta10sec.mp4&sub_area=0]]>
+                            </ClickThrough>
+                            <ClickTracking>
+                                <![CDATA[https://cd.socalmedialtd.com/api/pixel/clickTrack?ip=80.246.139.167&os=android&os_version=9&app_name=similaraudiences&lat=false&device=null&network=3g&ifa=e4a3699f-744a-4fd6-bd00-391bcdb562fa&$contry=Israel&creative=CalienteChivasSiemprePuesta10sec.mp4&adTitle=CalienteInterstitialAd1&campaign=caliente]]>
+                            </ClickTracking>
+                        </VideoClicks>
+                        <MediaFiles>
+                            <MediaFile type="video/mp4" bitrate="300" width="1080" height="1920" delivery="streaming" scalable="true" maintainAspectRatio="true">
+                                <![CDATA[https://storage.googleapis.com/crazyball_adserver/videos/Caliente/CalienteChivasSiemprePuesta10sec.mp4]]>
+                            </MediaFile>
+                        </MediaFiles>
+                    </Linear>
+                </Creative>
+                <!-- <Creative AdID="2">
+                    <CompanionAds>
+                        <Companion width="320" height="480">
+                            <StaticResource creativeType="image/gif">
+                                <![CDATA[https://storage.googleapis.com/crazyball_adserver/images/Caliente/Aquisition_Soccer-400-FREE_320x480.gif]]>
+                            </StaticResource>
+                            <CompanionClickThrough>
+                                <![CDATA[https://nerve.eshkol.io/go?uid=5d5d531b30080&area=similaraudiences&click_id=e4a3699f-744a-4fd6-bd00-391bcdb562fa&creative_id=Aquisition_Soccer-400-FREE_320x480.gif&sub_area=1]]>
+                            </CompanionClickThrough>
+                        </Companion>
+                    </CompanionAds>
+                </Creative> -->
+            </Creatives>
+        </InLine>
+    </Ad>
 </VAST>
