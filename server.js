@@ -46,6 +46,16 @@ app.use("/api/unity/test", (req, res) => {
   });
 });
 
+app.use("/api/unity/reloadabletest", (req, res) => {
+  const timeStamp = Date.now();
+  res.json({
+    title: "header " + timeStamp,
+    creative: "https://picsum.photos/200/200",
+    creativelink: "https://cataas.com/c",
+    footer: "random cute cat"
+  });
+});
+
 // app.get("*", (req, res) => {
 //   res.sendfile(path.join(__dirname + "/client/build/index.html"));
 // });
